@@ -1,0 +1,68 @@
+ <div class="login">
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+          <script type="text/javascript">
+		 
+		  $(function(){
+		  setTimeout(function(){
+		  $('.login').removeClass('hidden');
+		  },200);
+		  })();
+ function loadDoc(n) {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+     document.getElementById("masklog").innerHTML = this.responseText;
+    }
+  };
+  switch(n)
+  {
+  case 1:
+          { 
+		  xhttp.open("GET", "signup.html", true);
+         break;
+		 }
+  case 2:
+          { 
+		  xhttp.open("GET", "login.html", true);
+         break;
+		 }
+  }
+  xhttp.send();
+}
+</script> <center>
+         <div class="st1" id="target">
+          “Create your acount”
+		 </div>
+         
+		 <br> <form action="CreateAccount" method="post" enctype="multipart/form-data">
+         NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <input class="input" type="text" placeholder="FIRST NAME" name="fname"><br><br>
+		 LASTNAME&nbsp;&nbsp;
+         <input class="input" type="text" placeholder="LAST NAME" name="lname"><br>
+		 <br>
+		 ROLL NO.&nbsp;&nbsp;
+         <input class="input" type="text" placeholder="enter your ROLL NO." name="roll"><br>
+		 <BR>
+		 UNIVERSITY
+         <input class="input" placeholder="Enter University" name="univ"><br>
+         <br>
+		 COLLEGE&nbsp;&nbsp;&nbsp;
+         <input class="input" type="text" placeholder="Enter your COLLEGE" name="college"><br>
+		 <BR>
+		 GENDER &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		 <input type="RADIO" name="sex" value="male">MALE
+		 <input type="RADIO" name="sex" value="female">FEMALE
+		 <br><br>
+         PASSWORD&nbsp;&nbsp;
+         <input class="input" type="text" placeholder="Password" name="pass"><br><br>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PHOTO&nbsp;&nbsp;&nbsp;&nbsp;
+         <input type="file" name="image"><br><br> 
+		 <input id="sub" type="submit" value="signin">
+		 </form> 
+		 <hr> 
+		 <br>
+		 <a href="#f" id="trisign" onclick="loadDoc(2)">
+		 login
+		 </a>
+		 </center>
+    </div> 
